@@ -1,0 +1,1 @@
+/usr/bin/clang++-6.0  -g   CMakeFiles/MPI_Task1_13.dir/src/main.cpp.o  -o MPI_Task1_13 /usr/lib/x86_64-linux-gnu/libmpichcxx.so /usr/lib/x86_64-linux-gnu/libmpich.so /usr/lib/x86_64-linux-gnu/libomp.so -lpthread 
