@@ -1,0 +1,7 @@
+/home/masdevas/Soft/apps/CLion/ch-0/182.3911.40/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/clang-6.0 -DCMAKE_CXX_COMPILER=/usr/bin/clang++-6.0 -G "CodeBlocks - Unix Makefiles" /home/masdevas/Learning/MPI_Task2_27
+-- Could NOT find OpenMP_C (missing: OpenMP_C_FLAGS OpenMP_C_LIB_NAMES) 
+-- Could NOT find OpenMP_CXX (missing: OpenMP_CXX_FLAGS OpenMP_CXX_LIB_NAMES) 
+-- Could NOT find OpenMP (missing: OpenMP_C_FOUND OpenMP_CXX_FOUND) 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/masdevas/Learning/MPI_Task2_27/cmake-build-debug

@@ -1,0 +1,1 @@
+/usr/bin/clang++-6.0  -g   CMakeFiles/MPI_Task2_27.dir/main.cpp.o CMakeFiles/MPI_Task2_27.dir/image.cpp.o CMakeFiles/MPI_Task2_27.dir/png.cpp.o  -o MPI_Task2_27 /usr/lib/x86_64-linux-gnu/libmpichcxx.so /usr/lib/x86_64-linux-gnu/libmpich.so 

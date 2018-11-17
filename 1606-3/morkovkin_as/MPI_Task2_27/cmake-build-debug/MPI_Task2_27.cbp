@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="MPI_Task2_27"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MPI_Task2_27">
+				<Option output="/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/MPI_Task2_27" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DCHECK_TIME=1"/>
+					<Add directory="/home/masdevas/Learning/MPI_Task2_27/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/mpich"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward"/>
+					<Add directory="/usr/include/clang/6.0.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/llvm-6.0/lib/clang/6.0.1/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 MPI_Task2_27"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MPI_Task2_27/fast">
+				<Option output="/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/MPI_Task2_27" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DCHECK_TIME=1"/>
+					<Add directory="/home/masdevas/Learning/MPI_Task2_27/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/mpich"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward"/>
+					<Add directory="/usr/include/clang/6.0.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/llvm-6.0/lib/clang/6.0.1/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 MPI_Task2_27/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/masdevas/Learning/MPI_Task2_27/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/masdevas/Learning/MPI_Task2_27/image.cpp">
+			<Option target="MPI_Task2_27"/>
+		</Unit>
+		<Unit filename="/home/masdevas/Learning/MPI_Task2_27/image.hpp">
+			<Option target="MPI_Task2_27"/>
+		</Unit>
+		<Unit filename="/home/masdevas/Learning/MPI_Task2_27/main.cpp">
+			<Option target="MPI_Task2_27"/>
+		</Unit>
+		<Unit filename="/home/masdevas/Learning/MPI_Task2_27/png.cpp">
+			<Option target="MPI_Task2_27"/>
+		</Unit>
+		<Unit filename="/home/masdevas/Learning/MPI_Task2_27/png.hpp">
+			<Option target="MPI_Task2_27"/>
+		</Unit>
+		<Unit filename="/home/masdevas/Learning/MPI_Task2_27/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
