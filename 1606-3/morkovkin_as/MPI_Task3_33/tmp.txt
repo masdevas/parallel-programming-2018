@@ -1,0 +1,146 @@
+#include <iostream>
+#include <mpi.h>
+#include <cstring>
+#include "image.hpp"
+/*
+int* CreateSendCounts(size_t size_x, size_t size_y) {
+    int process_count;
+    MPI_Comm_size(MPI_COMM_WORLD, &process_count);
+    int* send_counts = new int[process_count];
+    int for_other = static_cast<int>(size_y / process_count  * size_x);
+    std::cout << "SC ******************" << '\n';
+    for (size_t i = 0; i < process_count; ++i) {
+        send_counts[i] = for_other;
+        std::cout << send_counts[i] << ' ';
+    }
+    std::cout << "******************" << '\n';
+    return send_counts;
+}
+
+int* CreateDispls(size_t size_x, size_t size_y) {
+    int process_count;
+    MPI_Comm_size(MPI_COMM_WORLD, &process_count);
+    int* displs = new int[process_count];
+    int for_other_shift = static_cast<int>(size_y / process_count  * size_x);
+    displs[0] = 0;
+    std::cout << "D ******************" << '\n';
+    for (size_t i = 1; i < process_count; ++i) {
+        displs[i] = displs[i - 1] + for_other_shift;
+        std::cout << displs[i] << ' ' << i << '\n';
+    }
+    std::cout << "******************" << '\n';
+    return displs;
+}
+
+int main(int argc, char* argv[]) {
+    MPI_Init(&argc, &argv);
+    int process_rank, process_count;
+    MPI_Comm_rank(MPI_COMM_WORLD, &process_rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &process_count);
+    size_t core_radius;
+    Image* image = nullptr;
+    std::string* image_name = nullptr;
+    std::string* image_name_for_save = nullptr;
+    double start_time;
+    if (process_rank == 0) {
+        core_radius = std::stoull(argv[1]);
+        image_name = new std::string(argv[2]);
+        image_name_for_save = new std::string(argv[3]);
+        image = new Image(*image_name);
+    }
+    MPI_Barrier(MPI_COMM_WORLD);
+    if (process_count == 1) {
+        start_time = MPI_Wtime();
+        image->NonParallelSmoothing(core_radius);
+        std::cout << "Sequential algorithm time : " << MPI_Wtime() - start_time << '\n';
+    } else {
+        MPI_Bcast(&core_radius, 1, MPI_UNSIGNED_LONG_LONG, 0, MPI_COMM_WORLD);
+        size_t size_x, size_y;
+        if (process_rank == 0) {
+            size_x = image->SizeX();
+            size_y = image->SizeY();
+        }
+        MPI_Bcast(&size_x, 1, MPI_UNSIGNED_LONG_LONG, 0, MPI_COMM_WORLD);
+        MPI_Bcast(&size_y, 1, MPI_UNSIGNED_LONG_LONG, 0, MPI_COMM_WORLD);
+        //Pixel* tmp;
+        MPI_Datatype dt_pixel;
+        MPI_Type_contiguous(3, MPI_INT, &dt_pixel);
+        MPI_Type_commit(&dt_pixel);
+        int* send_counts = nullptr;
+        int* displs = nullptr;
+        int for_other = static_cast<int>(size_y / process_count  * size_x);
+        std::cout << for_other << '\n';
+        auto* buf = new Pixel[for_other];
+        if (process_rank == 0) {
+            send_counts = CreateSendCounts(size_x, size_y);
+            displs = CreateDispls(size_x, size_y);
+        }
+        Pixel* pixels;
+        if (process_rank == 0) {
+            pixels = image->Data();
+        } else {
+            pixels = nullptr;
+        }
+        MPI_Scatterv(pixels, send_counts, displs, dt_pixel, buf, for_other, dt_pixel, 0, MPI_COMM_WORLD);
+
+        //work TODO
+        if (process_rank == 0) {    //TODO delete this
+            std::cout << "SETTING" << '\n';
+            memset(pixels, 0, size_x * size_y * sizeof(Pixel));//TODO delete this
+            for (size_t i = 0; i < size_x * size_y; ++i) {
+                if (pixels[i].blue != 0 || pixels[i].green != 0 || pixels[i].red != 0) {
+                    std::cout << "NOT NULL" << '\n';
+                }
+            }
+        }//TODO delete this
+        size_t tmp_zeros = 0;
+        for (size_t i = 0; i < for_other; ++i) {
+            if (buf[i].blue != 0 || buf[i].green != 0 || buf[i].red != 0) {
+                ++tmp_zeros;
+            }
+        }
+        std::cout << "*" << tmp_zeros << "*" << '\n';
+
+
+        MPI_Gatherv(buf, for_other, dt_pixel, pixels, send_counts, displs, dt_pixel, 0, MPI_COMM_WORLD);
+
+        if (process_rank == 0) {
+            std::cout << "ZASHEl" << '\n';
+            size_t count_non_zero = 0;
+            for (size_t i = 0; i < size_x * size_y; ++i) {
+                if (pixels[i].blue != image->Data()[i].blue || pixels[i].red != image->Data()[i].red) {
+                    std::cout << "AAA" << '\n';
+                }
+                if (pixels[i].blue != 0 || pixels[i].green != 0 || pixels[i].red != 0) {
+                    ++count_non_zero;
+                }
+            }
+            std::cout << "NON ZEROS : " << count_non_zero << '\n';
+        }
+
+        if (process_rank == 0) {
+            image->SetData(pixels);
+        }*/
+        /*if (process_rank == 0) {
+            tmp = new Pixel{1, 5, 8};
+        } else {
+            tmp = new Pixel;
+        }
+        MPI_Bcast(tmp, 1, dt_pixel, 0, MPI_COMM_WORLD);
+        std::cout << tmp->red << ' ' << tmp->green << ' ' << tmp->blue << '\n';*/
+/*
+        MPI_Barrier(MPI_COMM_WORLD);
+    }
+
+    MPI_Barrier(MPI_COMM_WORLD);
+    if (process_rank == 0) {
+        image->SaveTo(*image_name_for_save);
+        delete image_name;
+        delete image_name_for_save;
+        delete image;
+
+    }
+    MPI_Barrier(MPI_COMM_WORLD);
+    MPI_Finalize();
+    return 0;
+}*/

@@ -1,0 +1,1 @@
+/usr/bin/clang++-6.0  -g   CMakeFiles/MPI_Task3_33.dir/main.cpp.o CMakeFiles/MPI_Task3_33.dir/image.cpp.o CMakeFiles/MPI_Task3_33.dir/png.cpp.o CMakeFiles/MPI_Task3_33.dir/pixel.cpp.o  -o MPI_Task3_33 /usr/lib/x86_64-linux-gnu/libmpichcxx.so /usr/lib/x86_64-linux-gnu/libmpich.so 
