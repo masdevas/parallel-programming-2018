@@ -1,0 +1,6 @@
+﻿  image.cpp
+  main.cpp
+c:\users\morkovkin.a\source\repos\parallel_openmp\parallel_openmp\main.cpp(35): warning C4267: аргумент: преобразование из "size_t" в "uint32_t"; возможна потеря данных
+  png.cpp
+  Создание кода...
+  Parallel_OpenMP.vcxproj -> C:\Users\Morkovkin.A\source\repos\Parallel_OpenMP\x64\Debug\Parallel_OpenMP.exe
