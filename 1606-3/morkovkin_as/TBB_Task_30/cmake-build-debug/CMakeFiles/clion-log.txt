@@ -1,0 +1,4 @@
+/home/masdevas/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.69/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc-8 -DCMAKE_CXX_COMPILER=/usr/bin/g++-8 -G "CodeBlocks - Unix Makefiles" /home/masdevas/Learning/Parallel_TBB
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/masdevas/Learning/Parallel_TBB/cmake-build-debug

@@ -1,0 +1,5 @@
+/home/masdevas/Learning/Parallel_TBB/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/masdevas/Learning/Parallel_TBB/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/masdevas/Learning/Parallel_TBB/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/masdevas/Learning/Parallel_TBB/cmake-build-debug/src/CMakeFiles/Parallel_TBB.dir
+/home/masdevas/Learning/Parallel_TBB/cmake-build-debug/src/CMakeFiles/edit_cache.dir

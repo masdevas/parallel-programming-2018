@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/image.hpp
+pixel.hpp
+../include/pixel.hpp
+
+../include/pixel.hpp
+
+../include/png.hpp
+string
+-
+random
+-
+image.hpp
+../include/image.hpp
+
+/home/masdevas/Learning/Parallel_TBB/src/main.cpp
+iostream
+-
+chrono
+-
+omp.h
+-
+png.hpp
+/home/masdevas/Learning/Parallel_TBB/src/png.hpp
+image.hpp
+/home/masdevas/Learning/Parallel_TBB/src/image.hpp
+

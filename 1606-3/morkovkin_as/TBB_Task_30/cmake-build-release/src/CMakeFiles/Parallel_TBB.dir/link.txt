@@ -1,0 +1,1 @@
+/usr/bin/g++-8   -fsanitize=undefined,address,leak -O3 -DNDEBUG   CMakeFiles/Parallel_TBB.dir/image.cpp.o CMakeFiles/Parallel_TBB.dir/png.cpp.o CMakeFiles/Parallel_TBB.dir/main.cpp.o  -o Parallel_TBB /usr/lib/x86_64-linux-gnu/libtbb.so 

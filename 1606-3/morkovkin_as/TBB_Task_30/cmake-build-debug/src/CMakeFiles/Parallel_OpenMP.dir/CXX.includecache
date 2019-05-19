@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/image.hpp
+string
+-
+pixel.hpp
+../include/pixel.hpp
+
+../include/pixel.hpp
+
+/home/masdevas/Learning/Parallel_OpenMP/src/image.cpp
+utility
+-
+iostream
+-
+map
+-
+cstring
+-
+image.hpp
+/home/masdevas/Learning/Parallel_OpenMP/src/image.hpp
+
